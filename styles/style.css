@@ -1,0 +1,529 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define visible focus styles! 
+   :focus {
+     outline: ?????;
+   } */
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #060A24;
+}
+
+header {
+  height: 0.8%;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  width: 7.5%;
+  height: 0.4%;
+  margin: 5%;
+}
+
+header nav {
+  width: 7.5%;
+  height: 0.4%;
+  margin: 5%;
+}
+
+header nav ul {
+  display: none;
+}
+
+header nav ul li {
+  display: block;
+  background: #0000EC;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+header nav .menu_x {
+  display: none;
+}
+
+header nav input:checked ~ ul {
+  display: block;
+  position: absolute;
+  right: 0;
+}
+
+header nav input:checked ~ .menu_x {
+  display: list-item;
+  list-style: none;
+}
+
+header nav input:checked ~ .menu_h {
+  display: none;
+}
+
+header nav input {
+  display: none;
+}
+
+header nav label {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+header nav label i {
+  font-size: 7vw;
+}
+
+main h2 {
+  font-size: 2.25em;
+}
+
+main p {
+  font-size: 0.88em;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+main .presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5vw;
+}
+
+main .presentation h1 {
+  font-size: 2.25em;
+  margin-top: 0.5em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main .presentation h1 .world {
+  text-decoration: line-through;
+}
+
+main .presentation p {
+  margin-top: 1em;
+}
+
+main .presentation button {
+  margin: 1em 0;
+  background-color: #00F3BB;
+  width: 100%;
+  min-height: 3em;
+  max-width: 300px;
+  border: none;
+  font-size: 1em;
+  font-family: "IBM Plex Mono", monospace;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+main .presentation button:hover {
+  background: #00f0b8;
+  background: -webkit-gradient(linear, left top, right top, from(#00f0b8), to(#0000fe));
+  background: linear-gradient(90deg, #00f0b8 0%, #0000fe 100%);
+  color: #FFFFFF;
+}
+
+main .episodes {
+  background: blue;
+  background: -webkit-gradient(linear, left top, right top, from(blue), to(#0000a3));
+  background: linear-gradient(90deg, blue 0%, #0000a3 100%);
+  -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+          clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 90fr 5fr;
+      grid-template-columns: 5fr 90fr 5fr;
+  -ms-grid-rows: 7fr 5fr 80fr 15fr;
+      grid-template-rows: 7fr 5fr 80fr 15fr;
+  width: 100%;
+}
+
+main .episodes h2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  color: #FFFFFF;
+}
+
+main .episodes .list_episodes {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (25fr)[4];
+      grid-template-rows: repeat(4 25fr);
+  gap: 0.5em;
+}
+
+main .episodes .list_episodes li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .us {
+  position: relative;
+  bottom: 150px;
+}
+
+main .us img {
+  width: 100%;
+}
+
+main .us .container-us {
+  margin: 5vw;
+}
+
+main .us .container-us h2 {
+  padding-top: 0.5em;
+}
+
+main .us .container-us p {
+  margin-top: 1em;
+}
+
+main .interviews {
+  position: relative;
+  bottom: 150px;
+}
+
+main .interviews h2 {
+  padding-top: 0.5em;
+  margin: 5vw;
+}
+
+main .interviews .images_interviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .interviews .images_interviews img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  max-width: 400px;
+}
+
+main .topics {
+  position: relative;
+  bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .topics h2 {
+  padding-top: 0.5em;
+  margin: 5vw;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main .topics .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5vw;
+}
+
+main .topics .icon img {
+  width: 90vw;
+  height: 6.5em;
+  padding: 5vw;
+}
+
+main .topics .icon span {
+  font-size: 1.5em;
+  padding: 5vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+main .news {
+  background: blue;
+  background: -webkit-gradient(linear, left top, right top, from(blue), to(#0000a3));
+  background: linear-gradient(90deg, blue 0%, #0000a3 100%);
+  -webkit-clip-path: polygon(0 6%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 6%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  bottom: 150px;
+  height: 341px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .news h2 {
+  color: #FFFFFF;
+  margin-bottom: 0.5em;
+}
+
+main .news button {
+  margin: 1em 5vw;
+  background-color: #00F3BB;
+  min-height: 3em;
+  max-width: 300px;
+  border: none;
+  font-size: 1em;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+footer {
+  position: relative;
+  bottom: 150px;
+}
+
+footer p {
+  height: 0.4%;
+  margin: 5vw;
+  text-align: center;
+}
+
+footer .social_media {
+  margin: 5vw;
+  text-align: center;
+}
+
+footer i {
+  margin: 5vw;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 400px) {
+  header {
+    height: unset;
+  }
+  header .logo {
+    width: 2.5%;
+    height: unset;
+    margin: unset;
+    margin-left: 6.9%;
+  }
+  header nav {
+    width: unset;
+    height: unset;
+    margin: unset;
+    margin-right: 6.9%;
+  }
+  header nav input {
+    display: none;
+  }
+  header nav label {
+    display: none;
+  }
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header nav ul li {
+    background-color: unset;
+  }
+  header nav ul li a {
+    color: #060A24;
+    font-size: 1rem;
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  header nav ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+  }
+  header nav ul li a:active {
+    color: #060A24;
+    opacity: 0.56;
+    text-decoration: line-through;
+  }
+  main h2 {
+    font-size: 3em;
+  }
+  main p {
+    font-size: 1em;
+  }
+  main .presentation h1 .dot {
+    color: #0000EC;
+    font-size: 4rem;
+  }
+  main .presentation h1 .jump {
+    display: none;
+  }
+  main .presentation button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 2em;
+  }
+  main .episodes {
+    margin: unset;
+    bottom: unset;
+    /* prueba*/
+    display: unset;
+  }
+  main .us {
+    position: unset;
+    bottom: unset;
+    /*prueba*/
+  }
+  main .interviews {
+    position: unset;
+    bottom: unset;
+    /*prueba*/
+  }
+  main .topics {
+    position: unset;
+    bottom: unset;
+    /*prueba*/
+  }
+  main .news {
+    position: unset;
+    bottom: unset;
+    /*prueba*/
+  }
+  footer {
+    position: unset;
+  }
+}
+/*# sourceMappingURL=style.css.map */

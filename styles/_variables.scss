@@ -1,0 +1,21 @@
+$color-black: black;
+$color-white: #FFFFFF;
+$color-primary: #060A24;
+$color-secondary: #00F3BB;
+$color-blue: #0000EC;
+
+@mixin color-gradient {
+    background: rgb(0,0,255);
+    background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(0,0,163,1) 100%);
+
+}
+
+$font-secondary: 'IBM Plex Mono', monospace;
+
+$font-size-p-desk: 1em;
+$font-size-p-mob: 0.88em;
+$font-size-h2-desk: 3em;
+$font-size-h2-mob: 2.25em;
+
+
+
