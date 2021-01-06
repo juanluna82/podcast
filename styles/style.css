@@ -73,7 +73,7 @@ body {
 
 header {
   height: 0.8%;
-  width: 100vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,6 +153,16 @@ header nav label i {
   font-size: 7vw;
 }
 
+main {
+  /*GENERALES--------------------------*/
+  /*PRESENTATION--------------------*/
+  /*EPISODES-----------------------*/
+  /*US-------------------------------*/
+  /*INTERVIEWS-------------------------------*/
+  /*TOPICS-------------------------------*/
+  /*NEWS-------------------------------*/
+}
+
 main h2 {
   font-size: 2.25em;
 }
@@ -192,10 +202,11 @@ main .presentation h1 .world {
 
 main .presentation p {
   margin-top: 1em;
+  text-align: justify;
 }
 
 main .presentation button {
-  margin: 1em 0;
+  margin: 1.5em 0 1em 0;
   background-color: #00F3BB;
   width: 100%;
   min-height: 3em;
@@ -220,45 +231,49 @@ main .episodes {
   background: linear-gradient(90deg, blue 0%, #0000a3 100%);
   -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
           clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 5fr 90fr 5fr;
-      grid-template-columns: 5fr 90fr 5fr;
-  -ms-grid-rows: 7fr 5fr 80fr 15fr;
-      grid-template-rows: 7fr 5fr 80fr 15fr;
-  width: 100%;
-}
-
-main .episodes h2 {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  color: #FFFFFF;
-}
-
-main .episodes .list_episodes {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3/4;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (25fr)[4];
-      grid-template-rows: repeat(4 25fr);
-  gap: 0.5em;
-}
-
-main .episodes .list_episodes li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 1500px;
+}
+
+main .episodes h2 {
+  color: #FFFFFF;
+  margin: 1em 0 0 5vw;
+}
+
+main .episodes .list_episodes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+
+main .episodes .list_episodes iframe {
+  width: 90%;
+  height: 300px;
+}
+
+main .episodes .container_space {
+  height: 20vh;
 }
 
 main .us {
@@ -352,7 +367,7 @@ main .topics .icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5vw;
+  padding: 5vw 0 5vw 0;
 }
 
 main .topics .icon img {
@@ -411,6 +426,7 @@ main .news button {
 footer {
   position: relative;
   bottom: 150px;
+  height: auto;
 }
 
 footer p {
@@ -429,19 +445,15 @@ footer i {
   font-size: 1em;
 }
 
-@media screen and (min-width: 400px) {
-  header {
-    height: unset;
-  }
+@media screen and (min-width: 800px) {
+  /*HEADER -------------------*/
   header .logo {
     width: 2.5%;
-    height: unset;
     margin: unset;
     margin-left: 6.9%;
   }
   header nav {
     width: unset;
-    height: unset;
     margin: unset;
     margin-right: 6.9%;
   }
@@ -464,7 +476,7 @@ footer i {
   }
   header nav ul li a {
     color: #060A24;
-    font-size: 1rem;
+    font-size: 0.88em;
     -webkit-transition: 0.2s linear all;
     transition: 0.2s linear all;
     font-family: "IBM Plex Mono", monospace;
@@ -478,52 +490,172 @@ footer i {
     opacity: 0.56;
     text-decoration: line-through;
   }
+  /*MAIN MQ*-----------------*/
+  main {
+    /*GENERAL MAIN MQ---------*/
+    /* PRESENTATION -----------------------*/
+    /*EPISODES MQ -------------------*/
+    /*US MQ ----------------------------*/
+    /*INTERVIEWS MQ ----------------------------*/
+    /*TOPICS MQ ----------------------------*/
+    /*NEWS MQ ----------------------------*/
+    /*FOOTER MQ ----------------------------*/
+  }
   main h2 {
     font-size: 3em;
   }
   main p {
     font-size: 1em;
   }
+  main .presentation {
+    margin-left: 15vw;
+    margin-bottom: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main .presentation h1 {
+    font-size: 5vw;
+  }
   main .presentation h1 .dot {
     color: #0000EC;
-    font-size: 4rem;
+    font-size: 5vw;
   }
   main .presentation h1 .jump {
     display: none;
   }
   main .presentation button {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
     margin-top: 2em;
+    margin-bottom: 0px;
+    max-width: 226px;
+  }
+  main .presentation p {
+    width: 50vw;
   }
   main .episodes {
-    margin: unset;
-    bottom: unset;
-    /* prueba*/
-    display: unset;
+    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+            clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 10fr 40fr 10fr;
+        grid-template-rows: 10fr 40fr 10fr;
+    height: 1000px;
+  }
+  main .episodes h2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    margin: 12vw 0 3vw 15vw;
+    font-size: 3vw;
+  }
+  main .episodes .list_episodes {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 0 5vw;
   }
   main .us {
     position: unset;
-    bottom: unset;
-    /*prueba*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .us img {
+    -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+    width: 32.2%;
+    margin-left: 10vw;
+  }
+  main .us .container-us {
+    width: 32.2%;
+    margin-bottom: 0px;
+  }
+  main .us .container-us h2 {
+    padding-top: 0;
+  }
+  main .us .container-us h2 br {
+    display: none;
+  }
+  main .us .container-us p {
+    margin-top: 1em;
   }
   main .interviews {
     position: unset;
     bottom: unset;
     /*prueba*/
   }
+  main .interviews h2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 15vw;
+  }
+  main .interviews .images_interviews {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  main .interviews .images_interviews img {
+    max-width: 33.33vw;
+  }
   main .topics {
     position: unset;
     bottom: unset;
     /*prueba*/
   }
+  main .topics h2 {
+    margin-left: 15vw;
+  }
+  main .topics .container_icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .topics .container_icon .icon {
+    width: 18.1%;
+    padding: 0 1.5vw;
+  }
+  main .topics .container_icon .icon img {
+    width: auto;
+    padding: 3vw;
+  }
+  main .topics .container_icon .icon span {
+    font-size: 24px;
+    padding: 0;
+    width: auto;
+  }
   main .news {
     position: unset;
     bottom: unset;
     /*prueba*/
+    -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
   }
-  footer {
+  main footer {
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
     position: unset;
+    bottom: unset;
+    /*prueba*/
   }
 }
 /*# sourceMappingURL=style.css.map */

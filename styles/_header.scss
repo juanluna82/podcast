@@ -5,9 +5,8 @@ body {
 }
 
 header {
-
     height: 0.8%;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +15,6 @@ header {
         width: 7.5%;
         height: 0.4%;
         margin: 5%;
-
     }
 
     nav {

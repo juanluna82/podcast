@@ -1,115 +1,223 @@
-@media screen and (min-width: 400px) {
-    
-         header {
-            height: unset;
-        
-            .logo {
-                width: 2.5%;
-                height: unset;
-                margin: unset;
-                margin-left: 6.9%;
+@media screen and (min-width: 800px) {
+
+    /*HEADER -------------------*/
+
+    header {
+        .logo {
+            width: 2.5%;
+            margin: unset;
+            margin-left: 6.9%;
+        }
+
+        nav {
+            width: unset;
+            margin: unset;
+            margin-right: 6.9%;
+
+            input {
+                display: none;
             }
-            nav {
-                width: unset;
-                height: unset;
-                margin: unset;
-                margin-right: 6.9%;
+            label {
+                display: none;
+            }
 
-                input {
-                    display: none;
-                }
-                label {
-                    display: none;
-                }
+            ul {
+                display: flex;
+                justify-content: space-between;
 
-                ul {
-                    display: flex;
-                    justify-content: space-between;
-
-                    li {
-                        background-color: unset;
-                        a {                                 
-                            color: $color-primary;
-                            font-size: 1rem;
-                            transition: 0.2s linear all;
-                            font-family: $font-secondary;
+                li {
+                    background-color: unset;
+                    a {                                 
+                        color: $color-primary;
+                        font-size: 0.88em;
+                        transition: 0.2s linear all;
+                        font-family: $font-secondary;
                             
 
-                            &:hover {
-                                color: $color-secondary;
-                                text-decoration: line-through;                      
-                            }
-
-                            &:active {
-                                color: $color-primary;
-                                opacity: 0.56;
-                                text-decoration: line-through;  
-                            }
+                        &:hover {
+                            color: $color-secondary;
+                            text-decoration: line-through;
                         }
+
+                        &:active {
+                            color: $color-primary;
+                            opacity: 0.56;
+                            text-decoration: line-through;
+                         }
                     }
                 }
             }
+        }    
+    }
+
+    /*MAIN MQ*-----------------*/
+    main {
+           
+        /*GENERAL MAIN MQ---------*/
+
+        h2 {
+            font-size: $font-size-h2-desk;
         }
 
-        main {
-           
-            h2 {
-                 font-size: $font-size-h2-desk;
+        p {
+            font-size: $font-size-p-desk;
+        }
+
+        /* PRESENTATION -----------------------*/
+
+        .presentation {
+            margin-left: 15vw; 
+            margin-bottom: 0;
+            align-items: flex-start;
+
+            h1 {
+                font-size: $font-size-h1-desk;
+                .dot{
+                    color: #0000EC;
+                    font-size: $font-size-h1-desk;
+                }
+                .jump {
+                        display: none;
+                }
+            }
+
+            button {
+                margin-top: 2em;
+                margin-bottom: 0px;
+                max-width: 226px;
             }
 
             p {
-                 font-size: $font-size-p-desk;
+                width: 50vw;
+            }
+        }
+
+        /*EPISODES MQ -------------------*/
+
+        .episodes {
+            clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 10fr 40fr 10fr;
+            height: 1000px;
+
+            h2 {
+                grid-row: 1/2;
+                margin: 12vw 0 3vw 15vw;
+                font-size: 3vw;
+
             }
 
-            .presentation {
-                    h1 {
-                        .dot{
-                            color: #0000EC;
-                            font-size: 4rem;
-                        }
-                        .jump {
-                            display: none;
-                         }
-                    }
-
-                    button {
-                        align-self: flex-start;
-                        margin-top: 2em;
-                    }
+            .list_episodes {
+                grid-row: 2/3;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+                padding: 0 5vw;
+                
             }
 
-            .episodes {
-                margin: unset; 
-                bottom: unset;/* prueba*/
-                display: unset;
-            }
-
-            .us {
-                position: unset;
-                bottom: unset;  /*prueba*/
-            }
-
-            .interviews {
-                position: unset;
-                bottom: unset;
-                /*prueba*/
-            }
-
-            .topics {
-                position: unset;
-                bottom: unset;
-                /*prueba*/
-            }
-
-            .news {
-                position: unset;
-                bottom: unset;
-                /*prueba*/
-            }
 
         }
 
-        footer {
+        /*US MQ ----------------------------*/
+
+        .us {
             position: unset;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            img {
+                transform: translateY(-150px);
+                width: 32.2%;
+                margin-left: 10vw;
+            }
+            .container-us {
+                width: 32.2%;
+                margin-bottom: 0px;
+
+      
+                h2 {
+                    padding-top: 0;
+                    br {
+                        display: none;
+                    }
+                }
+                p {
+                    margin-top: 1em;
+                }
+            }
+
+
+        }
+
+        /*INTERVIEWS MQ ----------------------------*/
+
+        .interviews {
+            position: unset;
+            bottom: unset; /*prueba*/
+
+            h2 {
+                margin-top: 0px;
+                padding-top: 0px;
+                margin-left: 15vw;
+            }
+
+            .images_interviews {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+
+                img {
+                    max-width: 33.33vw;
+                }
+                
+            }
+        }
+
+        /*TOPICS MQ ----------------------------*/
+
+        .topics {
+            position: unset;
+            bottom: unset;/*prueba*/
+
+            h2 {
+                margin-left: 15vw;
+            }
+            .container_icon {
+                display: flex;
+                justify-content: center;
+
+                .icon {
+                    width: 18.1%;
+                    padding: 0 1.5vw;
+                    
+                    img {
+                        width:auto;
+                        padding: 3vw;
+                    }
+
+                    span {
+                        font-size: 24px;
+                        padding: 0;
+                        width: auto;
+                    }
+                }
+            }
+        }
+        /*NEWS MQ ----------------------------*/
+        .news {
+            position: unset;
+            bottom: unset; /*prueba*/
+            clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        /*FOOTER MQ ----------------------------*/
+        footer {
+        transform: translateY(150px);
+        position: unset;
+        bottom: unset; /*prueba*/
         }
     }
+}
