@@ -1,6 +1,6 @@
 main {
 
-/*GENERALES--------------------------*/
+    /*GENERALES--------------------------*/
     h2 {
         font-size: $font-size-h2-mob;
     }
@@ -10,21 +10,21 @@ main {
         font-family: $font-secondary;
     }
 
-/*PRESENTATION--------------------*/
+    /*PRESENTATION--------------------*/
 
     .presentation {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
         align-items: center;
         margin: 5vw;
 
 
         h1 {
-            font-size: 2.25em;
+            font-size: $font-size-h1-mob;
             margin-top: 0.5em;
             align-self: flex-start;
-            .world{
+            
+            .world {
                 text-decoration: line-through;
             }
         }
@@ -41,7 +41,8 @@ main {
             min-height: 3em;
             max-width: 300px;
             border:none;
-            font-size: 1em;
+            font-size: $font-size-btn-mob;
+            font-weight: bold;
             font-family: $font-secondary;
             transition: 0.2s linear all;
             
@@ -54,7 +55,7 @@ main {
         }
     }
 
-/*EPISODES-----------------------*/
+    /*EPISODES-----------------------*/
 
     .episodes {
         @include color-gradient;
@@ -62,21 +63,19 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        width: 100%;
         height: 1500px;
 
         
 
         h2 {
             color: $color-white;
-            margin: 1em 0 0 5vw;
+            margin: 2em 0 0 5vw;
         }
          
 
         .list_episodes {
             display: flex;
             flex-direction: column;
-            justify-content: stretch;
             align-items: center;
             z-index: 3;
 
@@ -90,7 +89,7 @@ main {
             height: 20vh;
         }
     }
-/*US-------------------------------*/
+    /*US-------------------------------*/
     .us {
 
         position: relative;
@@ -113,11 +112,12 @@ main {
         }
     }
 
-/*INTERVIEWS-------------------------------*/
+    /*INTERVIEWS-------------------------------*/
 
     .interviews {
         position: relative;
         bottom: 150px;
+        
         h2{
             padding-top: 0.5em;
             margin: 5vw;
@@ -132,13 +132,13 @@ main {
             img {
                 display: flex;
                 width: 100vw;
-                max-width: 400px;
+
             }
 
         }
     }
 
-/*TOPICS-------------------------------*/
+    /*TOPICS-------------------------------*/
 
     .topics {
         position: relative;
@@ -168,7 +168,7 @@ main {
             }
             
             span {
-                font-size: 1.5em;
+                font-size: $font-size-icon-mob;
                 padding: 5vw;
                 text-align: center;
                 font-weight: bold;
@@ -176,7 +176,7 @@ main {
         }
     }
 
-/*NEWS-------------------------------*/
+    /*NEWS-------------------------------*/
 
     .news {
         @include color-gradient;
@@ -202,7 +202,8 @@ main {
             min-height: 3em;
             max-width: 300px;
             border:none;
-            font-size: 1em;
+            font-weight: bold;
+            font-size: $font-size-btn-mob;
             font-family: $font-secondary;
         }
     }

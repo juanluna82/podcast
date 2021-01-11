@@ -2,6 +2,7 @@
 
     /*HEADER -------------------*/
 
+
     header {
         .logo {
             width: 2.5%;
@@ -24,12 +25,18 @@
             ul {
                 display: flex;
                 justify-content: space-between;
+                align-content: center;
+                position: unset;
+                background-color: unset;
+                height: unset;
 
                 li {
-                    background-color: unset;
+                    height: unset;
+                    margin-top: 0px;
+
                     a {                                 
                         color: $color-primary;
-                        font-size: 0.88em;
+                        font-size: $font-size-a-desk;
                         transition: 0.2s linear all;
                         font-family: $font-secondary;
                             
@@ -85,6 +92,7 @@
                 margin-top: 2em;
                 margin-bottom: 0px;
                 max-width: 226px;
+                font-size: $font-size-btn-desk;
             }
 
             p {
@@ -104,7 +112,7 @@
             h2 {
                 grid-row: 1/2;
                 margin: 12vw 0 3vw 15vw;
-                font-size: 3vw;
+                font-size: $font-size-h2-desk;
 
             }
 
@@ -129,13 +137,14 @@
             justify-content: center;
 
             img {
-                transform: translateY(-150px);
+                transform: translateY(-100px);
                 width: 32.2%;
                 margin-left: 10vw;
             }
             .container-us {
                 width: 32.2%;
                 margin-bottom: 0px;
+
 
       
                 h2 {
@@ -170,7 +179,7 @@
                 grid-template-rows: 1fr 1fr;
 
                 img {
-                    max-width: 33.33vw;
+                    max-width: 100%;
                 }
                 
             }
@@ -187,7 +196,9 @@
             }
             .container_icon {
                 display: flex;
+                flex-direction: row;
                 justify-content: center;
+                margin-bottom: 5vw;
 
                 .icon {
                     width: 18.1%;
@@ -195,29 +206,46 @@
                     
                     img {
                         width:auto;
-                        padding: 3vw;
+                        padding: 5vw 3vw;
                     }
 
                     span {
-                        font-size: 24px;
                         padding: 0;
                         width: auto;
                     }
                 }
             }
         }
+
         /*NEWS MQ ----------------------------*/
         .news {
             position: unset;
             bottom: unset; /*prueba*/
             clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
-        }
+            padding: 5vw;
 
-        /*FOOTER MQ ----------------------------*/
-        footer {
-        transform: translateY(150px);
-        position: unset;
-        bottom: unset; /*prueba*/
+            button {
+                width: 40vw;
+                font-size: $font-size-btn-desk;
+            }
         }
+    }
+    
+    /*FOOTER MQ ----------------------------*/
+    footer {
+        transform: translateY(150px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        p {
+            margin: 1vw 7vw;
+        }
+        .social_media {
+            margin: 1vw 7vw;
+        }
+        
+
     }
 }

@@ -2,33 +2,39 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     font-family: 'IBM Plex Sans', sans-serif;
     color: $color-primary;
+    max-width: 1440px;
+    margin: auto;
 }
 
 header {
-    height: 0.8%;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em;
     
     .logo {
         width: 7.5%;
-        height: 0.4%;
         margin: 5%;
     }
 
     nav {
         width: 7.5%;
-        height: 0.4%;
         margin:5%;
         ul {
             display: none;
+            position: absolute;
+            background: $color-blue;
+            height: 224px;
+            left: 0px;
+            top: 20vw;
+            
             li {
-                display: block;
-                background: $color-blue;
-                margin: 0;
-                padding: 10px;
                 list-style: none;
+                height: 2em;
+                margin-left: 1em;
+                margin-top: 1.5em;
+                
+                
                 
                 a {
                     color: $color-white;
