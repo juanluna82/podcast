@@ -10,6 +10,22 @@ main {
         font-family: $font-secondary;
     }
 
+    button {   
+        background-color: $color-secondary;
+        width: 100%;
+        min-height: 3em;
+        max-width: 300px;
+        border:none;
+        font-size: $font-size-btn-mob;
+        font-weight: bold;
+        font-family: $font-secondary;
+
+        a {
+            text-decoration: none;
+            color: $color-primary;
+        }
+    }
+
     /*PRESENTATION--------------------*/
 
     .presentation {
@@ -34,16 +50,8 @@ main {
             text-align: justify;
         }
 
-        button {
+        .btn_presentation {
             margin: 1.5em 0 1em 0;
-            background-color: $color-secondary;
-            width: 100%;
-            min-height: 3em;
-            max-width: 300px;
-            border:none;
-            font-size: $font-size-btn-mob;
-            font-weight: bold;
-            font-family: $font-secondary;
             transition: 0.2s linear all;
             
 
@@ -128,10 +136,10 @@ main {
             flex-direction: column;
             justify-items: center;
             align-items: center;
-            
+
             img {
                 display: flex;
-                width: 100vw;
+                width: 100%;
 
             }
 
@@ -196,15 +204,9 @@ main {
             margin-bottom: 0.5em;
         }
 
-        button {
+        .btn_news {
             margin: 1em 5vw;
-            background-color: $color-secondary;
-            min-height: 3em;
-            max-width: 300px;
-            border:none;
-            font-weight: bold;
-            font-size: $font-size-btn-mob;
-            font-family: $font-secondary;
         }
     }
 }
+

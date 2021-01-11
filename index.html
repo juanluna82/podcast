@@ -25,10 +25,10 @@
 
 
             <ul>
-                <li><a href="#episodes">EPISODIOS</a></li>
+                <li><a href="#epi">EPISODIOS</a></li>
                 <li><a href="#us">NOSOTROS</a></li>
-                <li><a href="">ENTREVISTAS</a></li>
-                <li><a href="">TÓPICOS</a></li>
+                <li><a href="#int">ENTREVISTAS</a></li>
+                <li><a href="#top">TÓPICOS</a></li>
             </ul>
         </nav>
     </header>   
@@ -38,9 +38,11 @@
             <h1> Hello <span class="world">world</span> <br class="jump"> pale blue dot <span class="dot">.</span></h1>
             <p>Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.
             </p>
-            <button>CONOCÉ MÁS</button>
+           
+            <button class=btn_presentation> <a href="#epi">CONOCÉ MÁS</a></button>
+            
         </section>
-        <section class="episodes">
+        <section class="episodes" id="epi">
 
             <h2>Episodios</h2>
             <div class="list_episodes">
@@ -57,8 +59,8 @@
             <div class="container_space"></div>
 
         </section>
-        <section class="us">
-            <img src="/images/phone.png" alt="">
+        <section class="us" id="us">
+            <img src="./images/phone.png" alt="">
             <div class="container-us">
                 <h2>De dónde <br class="jump"> venimos</h2>
                 <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in
@@ -68,56 +70,57 @@
             </div>
         </section>
 
-        <section class="interviews">
+        <section class="interviews" id="int">
             <h2>Invitadas/os estelares</h2>
             <div class="images_interviews">
                 <div class="hopper">
-                    <img src="/images/grace-hopper.png" alt="hopper">
+                    <img src="./images/grace-hopper.png" alt="hopper">
                 </div>
                 <div class="bouman">
-                    <img src="/images/Katie-Bouman.png" alt="bouman">
+                    <img src="./images/Katie-Bouman.png" alt="bouman">
                 </div>
                 <div class="hamilton">
-                    <img src="/images/Margaret_Hamilton.png" alt="hamilton">
+                    <img src="./images/Margaret_Hamilton.png" alt="hamilton">
                 </div>
                 <div class="computer">
-                    <img src="/images/An%20E.R.A.Univac%201103%20computer%20in%20the%201950s.png" alt="computer">
+                    <img src="./images/An%20E.R.A.Univac%201103%20computer%20in%20the%201950s.png" alt="computer">
                 </div>
                 <div class="operators">
-                    <img src="/images/Computer%20operators%20with%20an%20Eniac%20—%20the%20world’s%20first%20programmable%20general-purpose%20computer.png"
+                    <img src="./images/Computer%20operators%20with%20an%20Eniac%20—%20the%20world’s%20first%20programmable%20general-purpose%20computer.png"
                         alt="operators">
                 </div>
                 <div class="kare">
-                    <img src="/images/susan-kare.png" alt="kare">
+                    <img src="./images/susan-kare.png" alt="kare">
                 </div>
 
             </div>
 
         </section>
-        <section class="topics">
+        <section class="topics" id="top">
             <h2>Algunos de nuestros temas</h2>
             <div class="container_icon">
                 <div class="icon icon1">
-                    <img src="/images/icon1.svg" alt="icon1">
+                    <img src="./images/icon1.svg" alt="icon1">
                     <span>Trabajo remoto</span>
                 </div>
                 <div class="icon icon2">
-                    <img src="/images/icon2.svg" alt="icon2">
+                    <img src="./images/icon2.svg" alt="icon2">
                     <span>Repensando la programación</span>
                 </div>
                 <div class="icon icon3">
-                    <img src="/images/icon3.svg" alt="icon3">
+                    <img src="./images/icon3.svg" alt="icon3">
                     <span>Bases del código</span>
                 </div>
                 <div class="icon icon4">
-                    <img src="/images/icon4.svg" alt="icon4">
+                    <img src="./images/icon4.svg" alt="icon4">
                     <span>Seguridad informática</span>
                 </div>
             </div>
         </section>
         <section class="news">
             <h2>¿Querés las últimas novedades?</h2>
-            <button>ESCUCHÁ LOS EPISODIOS</button>
+            <button class=btn_news><a href="#epi">ESCUCHÁ LOS EPISODIOS</a></button>
+            
 
         </section>
 
@@ -126,11 +129,15 @@
     <footer>
         <p>© 2019— Hello blue pale dot</p>
         <div class="social_media">
-            <i class="fab fa-spotify"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-telegram"></i>
+            <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://web.telegram.org/#/login" target="_blank"><i class="fab fa-telegram"></i></a>
+            
+            
+            
+            
         </div>
 
     </footer>
